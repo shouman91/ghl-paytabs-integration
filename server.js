@@ -11,12 +11,12 @@ app.post('/oauth/token', async (req, res) => {
 
   try {
     // إرسال الكود إلى GHL أو PayTabs لتحويله إلى Access Token
-    const response = await axios.post('https://services.leadconnectorhq.com/oauth/token', {
+    const response = await axios.post('https://services.leadconnectorhq.com/oauth/token/', {
       client_id: '6819336b8469fa4b134e1c24-mabouuaq', // Client ID الخاص بك
       client_secret: 'e845e751-96ac-4bfd-b948-916d59695a07', // Client Secret الخاص بك
       grant_type: 'authorization_code',
       code: req.body.code, // الكود الذي استلمناه
-      redirect_uri: 'https://www.funnelflake.com/oauthcallback-page' // نفس URL الذي استخدمته في إعدادات OAuth
+      redirect_uri: 'https://www.funnelflake.com/oauthcallback-page/' // نفس URL الذي استخدمته في إعدادات OAuth
     });
 
     // إرجاع الـ Access Token

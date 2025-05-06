@@ -16,7 +16,7 @@ app.post('/oauth/token', async (req, res) => {
       client_secret: 'e845e751-96ac-4bfd-b948-916d59695a07', // Client Secret الخاص بك
       grant_type: 'authorization_code',
       code: req.body.code, // الكود الذي استلمناه
-      redirect_uri: 'https://funnelflake.com/oauth/callback' // نفس URL الذي استخدمته في إعدادات OAuth
+      redirect_uri: 'https://www.funnelflake.com/oauthcallback-page' // نفس URL الذي استخدمته في إعدادات OAuth
     });
 
     // إرجاع الـ Access Token
